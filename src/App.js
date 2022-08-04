@@ -1,7 +1,8 @@
 import { BrowserRouter, Route } from "react-router-dom";
 
 import LoginContainer from "./components/auth/LoginContainer";
-// import DefaultContainer from "./components/auth/DefaultContainer";
+import DefaultContainer from "./components/auth/DefaultContainer";
+import { StandardUser } from "./components/helpers/userRoles";
 
 /* 
 createContext
@@ -12,13 +13,11 @@ useContext()
 function App() {
   return (
     <div className="app-container">
-      <BrowserRouter>
-        <Route path="/" component={LoginContainer} />
+      <Route path="/" component={LoginContainer} />
 
-        {/* <Route component={DefaultContainer} /> */}
-
-        {/* <Redirect exact from="/" to="/Login" /> */}
-      </BrowserRouter>
+      <StandardUser withRedirect>
+        <Route component={DefaultContainer} />
+      </StandardUser>
     </div>
   );
 }
