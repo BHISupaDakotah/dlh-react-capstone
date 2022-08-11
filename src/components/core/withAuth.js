@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Redirect } from "react-router-dom";
 
-import { UserContext } from "../UserProvider";
+import { UserContext } from "../pages/UserProvider";
 
 function withAuth(authorizedRoles) {
   return ({ children, withRedirect }) => {

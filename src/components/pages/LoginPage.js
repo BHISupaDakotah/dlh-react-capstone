@@ -67,8 +67,7 @@ export default function LoginPage() {
         </div>
 
         <div>
-          <input type="submit" />
-          {/* {!authIsLoading ? <input type="submit" /> : <h1>...submitting</h1>} */}
+          {!authIsLoading ? <input type="submit" /> : <h1>...submitting</h1>}
         </div>
         {errorMessage}
       </form>

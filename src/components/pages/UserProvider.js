@@ -1,6 +1,3 @@
-// user
-// login, logout, authLoadingSplash
-
 import { useState, useEffect, createContext } from "react";
 import { useHistory } from "react-router-dom";
 export const UserContext = createContext();
@@ -10,11 +7,31 @@ export default function UserProvider({ children }) {
   const [user, setUser] = useState(null);
   const [authIsLoading, setAuthIsLoading] = useState(true);
 
+  function logout() {
+    setAuthIsLoading(true);
+    fetch("https://devpipeline-mock-api.herokuapp.com/api/auth/logout", {
+      credentials: "include",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message === "Logged out") {
+          setUser(null);
+          history.push("/login");
+        }
+        setAuthIsLoading(false);
+      })
+      .catch((err) => {
+        console.error("logout error ", err);
+        setAuthIsLoading(false);
+      });
+  }
+
   const userState = {
     user,
     setUser,
     authIsLoading,
     setAuthIsLoading,
+    logout,
   };
 
   useEffect(() => {
