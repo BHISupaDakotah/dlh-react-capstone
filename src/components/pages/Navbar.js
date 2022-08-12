@@ -24,7 +24,7 @@ export default function Navbar() {
       </div>
 
       <div className="nav-link">
-        <NavLink to="/color">Random Color</NavLink>
+        <NavLink to="/color">Colors</NavLink>
       </div>
 
       <div className="nav-link">

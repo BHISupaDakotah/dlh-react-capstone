@@ -1,4 +1,4 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import LoginContainer from "./components/auth/LoginContainer";
 import DefaultContainer from "./components/auth/DefaultContainer";
