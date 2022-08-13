@@ -25,15 +25,14 @@ export default function LoginPage() {
       },
       credentials: "include",
     })
-      .then((res) =>
-        res.json().then((data) => {
-          if (data.message === "Logged In") {
-            setUser(data.user);
-            setAuthIsLoading(false);
-            history.push("/dashboard");
-          }
-        })
-      )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.message === "Logged In") {
+          setUser(data.user);
+          setAuthIsLoading(false);
+          history.push("/dashboard");
+        }
+      })
       .catch((err) => {
         setAuthIsLoading(false);
         setErrorMessage("Invalid Credentials");
@@ -42,35 +41,41 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="login-page-container">
+      <div className="login-box">
+        <div className="login-title">Login</div>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="email"
-            placeholder="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="email"
+              placeholder="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <input
-            type="password"
-            placeholder="password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+          <div>
+            <input
+              type="password"
+              placeholder="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-        <div>
-          {!authIsLoading ? <input type="submit" /> : <h1>...submitting</h1>}
-        </div>
-        {errorMessage}
-      </form>
+          <div className="login-btn">
+            {!authIsLoading ? (
+              <input id="submit-btn" type="submit" value="Log In" />
+            ) : (
+              <h1>...submitting</h1>
+            )}
+          </div>
+          {errorMessage}
+        </form>
+      </div>
     </div>
   );
 }

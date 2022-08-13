@@ -1,0 +1,49 @@
+.login-page-container {
+  background-color: $color;
+  @include center-center();
+  height: 100vh;
+  padding-top: 0;
+
+  .login-box {
+    @include center-center();
+    padding-top: 0;
+    padding: 6%;
+    background-color: whitesmoke;
+    border-radius: 5%;
+
+    .login-title {
+      font-size: 5rem;
+      color: $color;
+      padding-bottom: 25%;
+    }
+    form {
+      width: 100%;
+
+      input {
+        background-color: color;
+        align-items: center;
+        @include no-outline;
+        margin: 3%;
+        padding: 3%;
+        width: 92.5%;
+        cursor: pointer;
+        border: 1px solid $shadow-color;
+        border-radius: 5px;
+        color: $color-dark;
+      }
+
+      .login-btn {
+        color: $color-dark;
+        #submit-btn {
+          padding: 5%;
+          width: 100%;
+          background-color: $color-light;
+
+          &:hover {
+            background-color: $comp-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -22,8 +22,8 @@ About Page
 Login Page[x]
 
 Must use BrowserRouter v5!!!![x]
-NavBar
-Must use SCSS
+NavBar[x]
+Must use SCSS[x]
 Must use CRA [x]
 Must be submitted through github link
 If you can host it, even better.
