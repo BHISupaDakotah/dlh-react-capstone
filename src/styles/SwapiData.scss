@@ -1,0 +1,20 @@
+.swapi-data-container {
+  @include center-center();
+  padding-top: 0;
+  margin-bottom: 1rem;
+
+  .dynamic-header {
+    font-size: 5rem;
+    padding-bottom: 1%;
+  }
+
+  .swapi-render-items {
+    @include center-center();
+    padding-top: 0;
+    margin: 2%;
+
+    .swapi-data-item {
+      margin: 5% 0;
+    }
+  }
+}

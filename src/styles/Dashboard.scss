@@ -1,3 +1,58 @@
-.weather-container {
+.dashboard-container {
+  margin-top: -1vh;
+  height: 89vh;
   @include center-center();
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+      color: $color;
+    }
+  }
+
+  .widget-container {
+    @include center-center();
+    width: 100%;
+    height: 90vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .widget-card {
+      padding-top: 2%;
+      text-align: center;
+      height: 200px;
+      width: 250px;
+      flex-direction: row;
+      border: 2px solid black;
+      margin: 2%;
+      -webkit-box-shadow: -2px 3px 8px 2px rgba(0, 0, 0, 0.49);
+      box-shadow: -2px 3px 8px 2px rgba(0, 0, 0, 0.49);
+      background-color: $shadow-color;
+
+      .widget-img {
+        border-radius: 25px;
+        justify-content: center;
+        align-self: center;
+      }
+
+      .widget-name {
+        justify-content: center;
+        align-self: center;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .widget-descritption {
+        justify-content: center;
+        align-self: center;
+      }
+
+      .widget-link {
+        padding-top: 3%;
+      }
+    }
+  }
 }

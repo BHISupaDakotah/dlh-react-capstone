@@ -3,7 +3,7 @@ FE Capstone:
 Requirements-
 Render a dashboard w/ cards for widgets.
 MUST HAVE WIDGETS: 
- - Weather widget that fetch's from an api
+ - Weather widget that fetch's from an api[x]
  - Swapi Query Widget -should be able to search swapi through your app and display information retrieved
  - At least 3 other tools of your choosing ,
  Trucking

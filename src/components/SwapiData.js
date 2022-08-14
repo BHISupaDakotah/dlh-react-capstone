@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import Swapi from "./pages/Swapi";
 
 export default function SwapiData(props) {
-  console.log(props);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const { pathname } = props.location;
+  const myEndpoint = pathname.slice(7);
 
   function renderSwapiData() {
     return data.map(
       (item) => {
         return (
-          <div key={item.uid}>
-            <Link to={`/swapi${pathname}/${item.uid}`}>{item.name}</Link>
+          <div key={item.uid} className="swapi-data-item">
+            {item.name}
           </div>
         );
       },
@@ -22,23 +23,27 @@ export default function SwapiData(props) {
   }
 
   useEffect(() => {
-    // setIsLoading(true);
-    fetch(`https://www.swapi.tech/api${pathname}`)
+    setIsLoading(true);
+    fetch(`https://www.swapi.tech/api/${myEndpoint}?page=1&limit=100`)
       .then((res) => res.json())
       .then((data) => {
         setData(data.results);
-        // setIsLoading(false);
+        setIsLoading(false);
       })
-      .catch((err) => console.log("swapi fetch err: ", err));
+      .catch((err) => console.log("swapi error", err));
   }, [pathname]);
-  return (
-    <div>
-      <h1>hello from swapi data</h1>
-      {console.log(props)}
-      <h3>{props.match.url}</h3>
 
-      {/* {isLoading ? <div>...loading</div> : <div>{renderSwapiData()}</div>} */}
-      <div>{renderSwapiData()}</div>
-    </div>
+  return (
+    <>
+      <Swapi />
+      <div className="swapi-data-container">
+        <div className="dynamic-header">{myEndpoint} by name</div>
+        {isLoading ? (
+          <div>...loading</div>
+        ) : (
+          <div className="swapi-render-item">{renderSwapiData()}</div>
+        )}
+      </div>
+    </>
   );
 }

@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter, Link, Redirect, Route, Switch } from "react-router-dom";
-
-import SwapiData from "../SwapiData";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Swapi() {
   const [swapiInput, setSwapiInput] = useState("");
@@ -15,7 +13,7 @@ export default function Swapi() {
         onChange={(e) => setSwapiInput(e.target.value)}
       >
         <option value="">Search Swapi</option>
-        <option value="films">films</option>
+        {/* <option value="films">films</option> */}
         <option value="people">people</option>
         <option value="planets">planets</option>
         <option value="species">species</option>
@@ -24,11 +22,8 @@ export default function Swapi() {
       </select>
 
       <h1>
-        swapi topic: <Link to={`/swapi/${swapiInput}`}>{swapiInput}</Link>
+        go to <Link to={`/swapi/${swapiInput}`}>{swapiInput}</Link>
       </h1>
-
-      <div>{SwapiData}</div>
-      {/* <Link to="/swapi/people">People</Link> */}
     </div>
   );
 }
