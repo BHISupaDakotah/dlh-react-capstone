@@ -6,9 +6,15 @@ export default function Weather() {
   function renderWeather() {
     return weatherData.map((day) => {
       return (
-        <div key={day.number}>
-          <div>{day.name}:</div>
-          <div>{day.shortForecast}</div>
+        <div key={day.number} className="day-container">
+          <div>{day.name}</div>
+          <div>
+            {" "}
+            Temp: {day.temperature}
+            {day.temperatureUnit}
+          </div>
+          <div>Forecast: {day.shortForecast}</div>
+          <hr />
         </div>
       );
     });
@@ -32,13 +38,8 @@ export default function Weather() {
 
   return (
     <div className="weather-container">
-      {console.log(weatherData)}
-      {/* {weatherData[0].name}
-      {weatherData[1].name}
-      {weatherData[2].name}
-      {weatherData[3].name} */}
-      {/* {weatherData.detailedForecast} */}
-      {renderWeather()}
+      <div className="weather-greeting">Weekly Forecast Vernal, Utah</div>
+      <div className="weather-float">{renderWeather()}</div>
     </div>
   );
 }

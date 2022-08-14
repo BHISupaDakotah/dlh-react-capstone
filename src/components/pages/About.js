@@ -8,7 +8,7 @@ MUST HAVE WIDGETS:
  - At least 3 other tools of your choosing ,
  Trucking
  PTO
- Random Background 
+ Random Background [x]
 
 About Page with a description of the Capstone and what you took away from this course.
 
