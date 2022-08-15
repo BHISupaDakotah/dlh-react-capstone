@@ -65,24 +65,6 @@ export default function PTO() {
             payment. (Personal Hours will not count toward overtime hours.)
           </p>
         </div>
-        <div className="manager-section">
-          <h3>Manager Section</h3>
-          <div className="yes-no">
-            <input type="radio" id="yes" name="drone" value="yes" />
-            <label for="yes">yes</label>
-
-            <input type="radio" id="no" name="drone" value="no" checked />
-            <label for="no">no</label>
-          </div>
-          <label>Date that request was submitted:</label>
-          <input type="date"></input>
-          <label>Comments:</label>
-          <input type="text"></input>
-          <div className="manager-confirmation">
-            <input type="text" placeholder="manager signature"></input>
-            <input type="date"></input>
-          </div>
-        </div>
       </form>
     </div>
   );

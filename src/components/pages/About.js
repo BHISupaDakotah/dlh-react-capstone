@@ -16,8 +16,8 @@ Login through custom api https://devpipeline-mock-api.herokuapp.com. A fallback 
 Logout [x]
 
 Pages -
-Render all Widgets on Dashboard (as cards, not the actual widgets themselves).
-Show Route to individual widget with an explanation of what the widget is.
+Render all Widgets on Dashboard (as cards, not the actual widgets themselves).[x]
+Show Route to individual widget with an explanation of what the widget is.[x]
 About Page
 Login Page[x]
 

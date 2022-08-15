@@ -1,20 +1,24 @@
 .dashboard-container {
-  margin-top: -1vh;
   height: 89vh;
   @include center-center();
+  color: $shadow-color;
+  text-shadow: 1px 1px 1px $color-white;
+  background-color: $color-white;
 
   a {
     text-decoration: none;
-    color: black;
+    color: $shadow-color;
 
     &:hover {
       cursor: pointer;
-      color: $color;
+      color: $accent-color;
+      text-decoration: underline;
     }
   }
 
   .widget-container {
     @include center-center();
+    padding-top: 0;
     width: 100%;
     height: 90vh;
     flex-direction: row;
@@ -26,11 +30,11 @@
       height: 200px;
       width: 250px;
       flex-direction: row;
-      border: 2px solid black;
+      border: 2px solid $color-dark;
       margin: 2%;
-      -webkit-box-shadow: -2px 3px 8px 2px rgba(0, 0, 0, 0.49);
-      box-shadow: -2px 3px 8px 2px rgba(0, 0, 0, 0.49);
-      background-color: $shadow-color;
+      -webkit-box-shadow: -2px 3px 8px 2px $color;
+      box-shadow: -2px 3px 8px 2px $color;
+      background-color: rgb(226, 242, 251);
 
       .widget-img {
         border-radius: 25px;

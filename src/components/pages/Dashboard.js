@@ -53,7 +53,6 @@ export default function Dashboard() {
           />
           <div className="widget-name">{widget.name}</div>
           <div className="widget-descritption">{widget.description}</div>
-          {/* <Link to={`/swapi/${swapiInput}`}>{swapiInput}</Link> */}
           <div className="widget-link">
             <Link to={widget.route}>{widget.name}</Link>
           </div>

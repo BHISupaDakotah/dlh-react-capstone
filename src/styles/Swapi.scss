@@ -1,3 +1,51 @@
 .swapi-container {
   @include center-center();
+  background-color: $color-light;
+  width: 100%;
+  color: $comp-color;
+
+  label {
+    padding: 1% 0;
+    font-size: xx-large;
+  }
+
+  select {
+    font-size: larger;
+    border-radius: 25px;
+    color: $color-dark;
+    @include no-outline();
+    text-align: center;
+  }
+
+  .swapi-render {
+    h1 {
+      color: $comp-color;
+      text-transform: capitalize;
+    }
+
+    .swapi-render-list {
+      .swapi-list-item {
+        padding-top: 0;
+        width: 100%;
+        padding: 2%;
+        margin: 2%;
+
+        &:before {
+          content: "\A";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: $color;
+          margin-right: 10px;
+          display: inline-block;
+        }
+
+        &:hover {
+          background-color: $color-white;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

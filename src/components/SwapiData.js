@@ -36,14 +36,14 @@ export default function SwapiData(props) {
   return (
     <>
       <Swapi />
-      <div className="swapi-data-container">
-        <div className="dynamic-header">{myEndpoint} by name</div>
+      {/* <div className="swapi-data-container"> */}
+      {/* <div className="dynamic-header">{myEndpoint} by name</div>
         {isLoading ? (
           <div>...loading</div>
         ) : (
           <div className="swapi-render-item">{renderSwapiData()}</div>
         )}
-      </div>
+      </div> */}
     </>
   );
 }
