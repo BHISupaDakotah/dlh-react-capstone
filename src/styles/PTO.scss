@@ -90,6 +90,8 @@
       width: 40%;
       background-color: $color-light;
       border-radius: 25px;
+      transition: 0.4s;
+      margin-bottom: 2%;
 
       &:hover {
         background-color: $comp-color;
