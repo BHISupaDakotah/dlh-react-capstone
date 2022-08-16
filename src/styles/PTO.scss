@@ -1,3 +1,103 @@
 .pto-container {
   @include center-center();
+  background-color: $color-med;
+  height: auto;
+  background-image: url("../pics/Black\ Camo.png");
+
+  label {
+    font-size: x-large;
+    font-weight: bold;
+    align-items: left;
+  }
+
+  input,
+  .dropdown {
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2%;
+    align-items: right;
+    font-size: large;
+    border-radius: 15px;
+    padding: 1.5%;
+  }
+
+  .dropdown {
+    text-align: center;
+  }
+
+  .pto-float {
+    @include center-center();
+    width: 40%;
+    padding: 0 1%;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px 7px $shadow-color;
+    box-shadow: 0px 0px 10px 7px $shadow-color;
+    margin: 2% 0;
+
+    form {
+      color: $color;
+      @include center-center();
+      padding-top: 0;
+      text-align: center;
+      .employee-name {
+      }
+
+      .department-setup {
+      }
+
+      .manager-name {
+      }
+
+      .absence-type {
+      }
+
+      .date-selection {
+        @include center-center();
+        color: black;
+
+        div {
+          margin: 2%;
+          padding: 2%;
+
+          label {
+            color: $color-dark;
+            margin: 2%;
+          }
+        }
+      }
+
+      .employee-confirmation {
+        label {
+          padding: 5%;
+        }
+      }
+
+      p {
+        text-align: justify;
+        word-wrap: break-word;
+        color: black;
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .sub-btn {
+      font-size: 1.5em;
+      color: $color-dark;
+      padding: 3%;
+      width: 40%;
+      background-color: $color-light;
+      border-radius: 25px;
+
+      &:hover {
+        background-color: $comp-color;
+      }
+    }
+  }
+
+  h1 {
+    color: $color;
+  }
 }

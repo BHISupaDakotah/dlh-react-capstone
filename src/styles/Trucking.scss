@@ -1,0 +1,81 @@
+.trucking-container {
+  @include center-center();
+  background-color: $shadow-color;
+
+  h1 {
+    color: $color-light;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+
+  .job-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+
+    .single-job-container {
+      float: left;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid rgb(202, 203, 203);
+      margin-top: 5%;
+      -webkit-box-shadow: 0px 0px 14px 5px $color-white;
+      box-shadow: 0px 0px 14px 5px $color-white;
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        font-size: 20px;
+
+        div {
+          padding: 1%;
+          width: 100%;
+          overflow-wrap: break-word;
+
+          .no-border {
+            border: none;
+            padding: 1% 0 0 0;
+          }
+        }
+
+        span {
+          background-color: $color-light;
+          text-decoration: underline;
+          padding: 1%;
+
+          .center {
+            text-align: center;
+          }
+        }
+      }
+
+      .yard-info-header {
+        display: flex;
+        flex-direction: row;
+        padding: 1% 0;
+        background-color: $color-light;
+        margin: 0 1%;
+
+        .header-item {
+          padding-right: 9%;
+        }
+      }
+
+      .yard-info-items {
+        display: flex;
+        flex-direction: row;
+        margin: 0 1%;
+
+        .yard-item {
+          padding-right: 10%;
+        }
+
+        .shift-left {
+          margin-left: -2.5%;
+        }
+      }
+    }
+  }
+}
