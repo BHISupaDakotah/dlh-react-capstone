@@ -73,8 +73,8 @@ export default function LoginPage() {
               <h1>...submitting</h1>
             )}
           </div>
-          {errorMessage}
         </form>
+        {errorMessage}
       </div>
     </div>
   );

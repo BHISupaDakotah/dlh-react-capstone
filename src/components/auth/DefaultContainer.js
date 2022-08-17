@@ -11,14 +11,13 @@ import Trucking from "../pages/Trucking";
 import PTO from "../pages/PTO";
 import RandomColor from "../pages/RandomColor";
 import About from "../pages/About";
-import SwapiData from "../SwapiData";
 
 function Logout() {
   const { logout } = useContext(UserContext);
 
   useEffect(() => {
     logout();
-  }, []);
+  }, [logout]);
 
   return <div>...loggin out</div>;
 }
@@ -31,7 +30,7 @@ export default function DefaultContainer() {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/weather" component={Weather} />
         <Route exact path="/swapi" component={Swapi} />
-        <Route path="/swapi/:endpoint" component={SwapiData} />
+        <Route path="/swapi/:endpoint" component={Swapi} />
         <Route path="/trucking" component={Trucking} />
         <Route path="/pto" component={PTO} />
         <Route path="/color" component={RandomColor} />

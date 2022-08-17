@@ -3,7 +3,7 @@ export default function Trucking() {
   function renderTruckingInfo() {
     const scheduleInfo = [
       {
-        id: 1,
+        uid: 1,
         date: today,
         jobName: "21-21-HPMA HP Materials",
         jobNumber: "21-21-HPMA",
@@ -38,7 +38,7 @@ export default function Trucking() {
         ],
       },
       {
-        id: 2,
+        uid: 2,
         date: today,
         jobName: "21-21-HPMA HP Materials",
         jobNumber: "21-21-HPMA",
@@ -73,7 +73,7 @@ export default function Trucking() {
         ],
       },
       {
-        id: 3,
+        uid: 3,
         date: "8/16/22",
         jobName: "21-21-HPMA HP Materials",
         jobNumber: "21",
@@ -112,7 +112,7 @@ export default function Trucking() {
     return scheduleInfo.map((job) => {
       if (job.date === today) {
         return (
-          <div key={job.id} className="single-job-container">
+          <div key={job.uid} className="single-job-container">
             <div className="row">
               <div>
                 <span>Job Name:</span> {job.jobName}
@@ -147,7 +147,7 @@ export default function Trucking() {
             </div>
             <div className="row">
               <div>
-                <span className="center">Comments:</span>{" "}
+                <span className="center">Comments:</span>
                 <div className="no-border">{job.comments}</div>
               </div>
             </div>

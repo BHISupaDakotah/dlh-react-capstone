@@ -18,17 +18,24 @@
   }
 
   .swapi-render {
+    @include center-center();
+    padding-top: 0;
     h1 {
       color: $comp-color;
       text-transform: capitalize;
     }
 
     .swapi-render-list {
+      @include center-center();
+      padding-top: 0;
+      text-align: center;
+
       .swapi-list-item {
         padding-top: 0;
         width: 100%;
         padding: 2%;
         margin: 2%;
+        width: 100%;
 
         &:before {
           content: "\A";
