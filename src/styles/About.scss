@@ -1,0 +1,28 @@
+.about-container {
+  @include center-center();
+  height: 89vh;
+  width: 100%;
+  background-color: $color-light;
+
+  .single-about {
+    border: 1px solid black;
+    margin: 10%;
+    -webkit-box-shadow: 0px 0px 15px 5px #000000;
+    box-shadow: 0px 0px 15px 5px #000000;
+
+    .about-title {
+      color: $color-dark;
+      text-align: center;
+      font-size: xx-large;
+      text-decoration: underline;
+      padding: 3% 0;
+      margin-bottom: 5%;
+    }
+
+    .about-blog {
+      color: $shadow-color;
+      text-align: justify;
+      padding: 0 2% 2% 2%;
+    }
+  }
+}

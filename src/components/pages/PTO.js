@@ -41,9 +41,8 @@ export default function PTO() {
             <select
               name="department"
               className="dropdown"
-              defaultValue={"please select"}
+              defaultValue={employeeName}
               onChangeCapture={(e) => setEmployeeName(e.target.value)}
-              value={employeeName}
             >
               <option value={"please select"} hidden>
                 --Please choose an option--
@@ -66,9 +65,8 @@ export default function PTO() {
             <select
               name="department"
               className="dropdown"
-              defaultValue={"please select"}
+              defaultValue={managerName}
               onChangeCapture={(e) => setManagerName(e.target.value)}
-              value={managerName}
             >
               <option value={"please select"} hidden>
                 --Please choose an option--

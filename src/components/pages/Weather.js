@@ -9,7 +9,6 @@ export default function Weather() {
         <div key={day.number} className="day-container">
           <div>{day.name}</div>
           <div>
-            {" "}
             Temp: {day.temperature}
             {day.temperatureUnit}
           </div>
